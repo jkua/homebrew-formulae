@@ -11,7 +11,7 @@ class Geographiclib < Formula
     ENV.append "CFLAGS", '-stdlib=libstdc++'
     ENV.append "LDFLAGS", '-stdlib=libstdc++ -lstdc++'
     #The following is necessary because libtool liks to strip LDFLAGS:
-    ENV.cxx = "/usr/bin/clang -stdlib=libstdc++
+    ENV.cxx = "/usr/bin/clang -stdlib=libstdc++"
     system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
     system "make install"
